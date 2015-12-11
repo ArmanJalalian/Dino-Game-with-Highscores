@@ -1554,8 +1554,9 @@ function hideClass(name) {
             distance = this.getActualDistance(distance);
             var highScoreStr = (this.defaultString +
             distance).substr(-this.config.MAX_DISTANCE_UNITS);
-            console.log(highScoreStr);
             this.highScore = ['10', '11', ''].concat(highScoreStr.split(''));
+            var span = document.getElementById('highscore');
+            span.appendChild( document.createTextNode(highScoreStr) );
         },
         /**
          * Reset the distance meter back to '00000'.
