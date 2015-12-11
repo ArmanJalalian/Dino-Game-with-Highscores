@@ -13,16 +13,15 @@ postScore();
 function postScore()
 {
     global $connect;
-    if(isset($_POST['Score'])){
-        $player = ($_POST['Player']);
-        $score = ($_POST['Score']);
-        $created = date('Y-m-d');
-        $scoreQuery = "INSERT INTO highscore (Player, Score, Created) VALUES ('$player', '$score', '$created')";
 
-        if($scoreQuery = mysqli_query($connect, $scoreQuery))
-        {
-            echo "Succes!";
-        }
+    $player = $_POST['Player'];
+    $score = $_POST['Score'];
+    $created = date('Y-m-d H:i:s');
+    $scoreQuery = "INSERT INTO `Highscore`(`Player`, `Score`, `Created`) VALUES ('$player', '$score', '$created')";
+
+    if($scoreQuery = mysqli_query($connect, $scoreQuery))
+    {
+        echo "Succes!";
     }
 
 }

@@ -1558,6 +1558,8 @@ function hideClass(name) {
             this.highScore = ['10', '11', ''].concat(highScoreStr.split(''));
             var span = document.getElementById('highscore');
             span.appendChild( document.createTextNode(highScoreStr) );
+            jQuery('#Player').fadeIn(500);
+            jQuery('#Submit').fadeIn(500);
         },
         /**
          * Reset the distance meter back to '00000'.
@@ -1565,6 +1567,9 @@ function hideClass(name) {
         reset: function() {
             this.update(0);
             this.acheivement = false;
+            jQuery('#Player').fadeOut(500);
+            jQuery('#Submit').fadeOut(500);
+            $("#highscore").empty();
         }
     };
     //******************************************************************************

@@ -3,17 +3,21 @@
  */
 $(document).ready(function(){
 
-    var highscore = $("#highscore").val();
-
-    console.log(highscore);
-
-    $.ajax({
-        type: "POST",
-        url: "score.php",
-        data: {
-            Player: Player,
-            Score: Score,
-            Created: Created
-        }
-    })
+        $("#Submit").click(function(){
+            var player = $("#Player").val();
+            console.log(Player);
+            var highscore = $("#highscore").html();
+            console.log(highscore);
+            $.ajax({
+                url: "score.php",
+                type: "POST",
+                data: {
+                    Player: player,
+                    Score: highscore,
+                },
+                success: function(data){
+                    console.log(data);
+                }
+            })
+        });
 });
