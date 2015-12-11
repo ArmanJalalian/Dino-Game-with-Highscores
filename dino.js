@@ -1550,6 +1550,7 @@ function hideClass(name) {
          * Position of char in the sprite: H - 10, I - 11.
          * @param {number} distance Distance ran in pixels.
          */
+
         setHighScore: function(distance) {
             distance = this.getActualDistance(distance);
             var highScoreStr = (this.defaultString +
