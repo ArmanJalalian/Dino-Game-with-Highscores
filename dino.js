@@ -1556,10 +1556,10 @@ function hideClass(name) {
             var highScoreStr = (this.defaultString +
             distance).substr(-this.config.MAX_DISTANCE_UNITS);
             this.highScore = ['10', '11', ''].concat(highScoreStr.split(''));
+            $("#highscore").empty();
             var span = document.getElementById('highscore');
             span.appendChild( document.createTextNode(highScoreStr) );
-            jQuery('#Player').fadeIn(500);
-            jQuery('#Submit').fadeIn(500);
+            jQuery('#form').fadeIn(500);
         },
         /**
          * Reset the distance meter back to '00000'.
@@ -1567,9 +1567,7 @@ function hideClass(name) {
         reset: function() {
             this.update(0);
             this.acheivement = false;
-            jQuery('#Player').fadeOut(500);
-            jQuery('#Submit').fadeOut(500);
-            $("#highscore").empty();
+            jQuery('#form').fadeOut(500);
         }
     };
     //******************************************************************************

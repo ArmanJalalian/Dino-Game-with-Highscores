@@ -8,7 +8,12 @@ $(document).ready(function(){
         dataType: "json",
         success: function(data){
             console.log(data);
+            $.each(data,function(index,item){
+                console.log(item['Player']);
+            });
         }
     })
+
+
 
 });

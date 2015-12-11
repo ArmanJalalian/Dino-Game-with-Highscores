@@ -17,9 +17,15 @@
     <meta name="twitter:description" content="Check out the cool hidden game from Google Chrome!">
     <meta name="twitter:image:src" content="http://img.thecodepost.org/2015/01/trex.png">
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"       crossorigin="anonymous">
+
     <!--script type="text/javascript" src="a.js"></script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="dino.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dino.css">
 </head>
 
@@ -93,12 +99,27 @@
         <canvas class="runner-canvas" width="600" height="150"></canvas>
     </div>
 
-    <h1>High score:<span id="highscore"></span></h1>
+    <h1>High score: <span id="highscore"></span></h1>
 
-    <div id="form">
-            <input id="Player" type="text" style="display: none;"/>
-            <button id="Submit" style="display: none;"></button>
+    <div class="input-group" id="form" style="display: none;">
+        <input type="text" class="form-control" placeholder="(Nick)name">
+        <span class="input-group-btn">
+            <button class="btn btn-success" type="button">Send</button>
+        </span>
     </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>(Nick)name</td>
+                <td>Highscore</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+
+        </tbody>
+    </table>
 
     <script type="text/javascript">
         if (navigator.userAgent.toLowerCase().indexOf('chrome') <= -1) {
