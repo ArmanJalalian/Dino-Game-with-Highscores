@@ -583,7 +583,6 @@ function hideClass(name) {
             if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
-                console.log(this.highestScore);
             }
             // Reset the time clock.
             this.time = getTimeStamp();
