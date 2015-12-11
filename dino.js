@@ -578,10 +578,12 @@ function hideClass(name) {
             } else {
                 this.gameOverPanel.draw();
             }
+
             // Update the high score.
             if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
+                console.log(this.highestScore);
             }
             // Reset the time clock.
             this.time = getTimeStamp();
@@ -1554,6 +1556,7 @@ function hideClass(name) {
             distance = this.getActualDistance(distance);
             var highScoreStr = (this.defaultString +
             distance).substr(-this.config.MAX_DISTANCE_UNITS);
+            console.log(highScoreStr);
             this.highScore = ['10', '11', ''].concat(highScoreStr.split(''));
         },
         /**
