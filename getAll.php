@@ -19,9 +19,9 @@ function getAll()
 
     while($row = mysqli_fetch_assoc($query)){
         $highscore_array[] = array(
-            'Player' => $row['Player'],
-            'Highscore' => $row['Score'],
-            'Date' => $row['Created']
+            'player' => $row['Player'],
+            'highscore' => $row['Score'],
+            'date' => $row['Created']
         );
 
     }

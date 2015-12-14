@@ -102,21 +102,21 @@
     <h1>High score: <span id="highscore"></span></h1>
 
     <div class="input-group" id="form" style="display: none;">
-        <input type="text" class="form-control" placeholder="(Nick)name">
+        <input id="Player" type="text" class="form-control" placeholder="(Nick)name">
         <span class="input-group-btn">
-            <button class="btn btn-success" type="button">Send</button>
+            <button id="Submit" class="btn btn-success" type="button">Send</button>
         </span>
     </div>
 
     <table class="table table-striped">
         <thead>
             <tr>
-                <td>(Nick)name</td>
-                <td>Highscore</td>
-                <td>Date</td>
+                <th>(Nick)name</th>
+                <th>Highscore</th>
+                <th>Date</th>
             </tr>
         </thead>
-        <tbody id="tablebody">
+        <tbody id="tbody">
 
         </tbody>
     </table>

@@ -5,15 +5,15 @@ $(document).ready(function(){
 
         $("#Submit").click(function(){
             var player = $("#Player").val();
-            console.log(Player);
+            console.log(player);
             var highscore = $("#highscore").html();
             console.log(highscore);
             $.ajax({
                 url: "score.php",
-                type: "POST",
+                method: "POST",
                 data: {
                     Player: player,
-                    Score: highscore,
+                    Score: highscore
                 },
                 success: function(data){
                     console.log(data);
