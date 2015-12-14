@@ -17,9 +17,9 @@ function postScore()
     $player = ($_POST['Player']);
     $score = ($_POST['Score']);
     $created = date('Y-m-d H:i:s');
-    $scoreQuery = "INSERT INTO `Highscore`(`Player`, `Score`, `Created`) VALUES ('$player', '$score', '$created')";
+    $postQuery = "INSERT INTO `Highscore`(`Player`, `Score`, `Created`) VALUES ('$player', '$score', '$created')";
 
-    if($scoreQuery = mysqli_query($connect, $scoreQuery))
+    if($scoreQuery = mysqli_query($connect, $postQuery))
     {
         echo "Succes!";
     }

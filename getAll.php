@@ -13,7 +13,8 @@ getAll();
 function getAll()
 {
     global $connect;
-    $sql = "SELECT * FROM highscore ORDER BY Score DESC";
+    $sql = "SELECT * FROM highscore ORDER BY Score DESC LIMIT 10";
+
     $query = mysqli_query($connect,$sql);
     $highscore_array = [];
 
